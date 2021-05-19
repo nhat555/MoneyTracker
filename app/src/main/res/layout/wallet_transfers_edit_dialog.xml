@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/di15dp"
+    android:paddingLeft="@dimen/di30dp"
+    android:paddingRight="@dimen/di30dp"
+    android:background="@color/colorWhite"
+    tools:context=".controllers.categories.HomeCateActivity" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/invalid_money_old_edit"
+        android:textSize="@dimen/di15dp"
+        android:textColor="@color/colorBlack"
+        tools:ignore="SpUsage" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/di40dp"
+        android:layout_marginTop="@dimen/di20dp"
+        android:background="@drawable/border_radius">
+
+        <Button
+            android:id="@+id/buttonTransfers_wallet_transfers_edit_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/trans_money_go"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="@dimen/di10dp"
+            android:layout_marginRight="@dimen/di10dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:textSize="@dimen/di15dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/di5dp"
+        android:paddingBottom="@dimen/di5dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/buttonClose_wallet_transfers_edit_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/close"
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/di13dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

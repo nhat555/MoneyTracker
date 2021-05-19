@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nhat.moneytracker">
+
+
+
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:configChanges="orientation|screenSize"
+        tools:ignore="AllowBackup">
+
+        <!--Activity-->
+        <activity android:name="com.nhat.moneytracker.controllers.accounts.LoginActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.accounts.SignUpActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.accounts.ForgotPassActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.accounts.ChangePassActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.accounts.EditInfoActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.accounts.LoginInfoActivity"/>
+
+        <activity android:name="com.nhat.moneytracker.controllers.budgets.HomeBudgetActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.budgets.AddBudgetsActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.budgets.ChooseTimeActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.budgets.TabApplyBudgetsActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.budgets.TabFinishBudgetsActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.budgets.EditBudgetsActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.budgets.DetailBudgetsActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.budgets.SeeTransBudgetsActivity"/>
+
+        <activity android:name="com.nhat.moneytracker.controllers.categories.HomeCateActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.categories.AddCateActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.categories.TabExpensesActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.categories.TabRevenueActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.categories.CateIconsActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.categories.EditCateActivity"/>
+
+        <activity android:name="com.nhat.moneytracker.controllers.chooses.TabHostCateActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.chooses.TabExpensesCateActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.chooses.TabRevenueCateActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.chooses.ChooseWalletActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.chooses.ChooseEventActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.chooses.ChooseSavingsActivity"/>
+
+        <activity android:name="com.nhat.moneytracker.controllers.events.HomeEventActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.events.AddEventActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.events.EditEventActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.events.DetailEventActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.events.SeeTransEventActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.events.TabApplyEventActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.events.TabFinishEventActivity"/>
+
+        <activity android:name="com.nhat.moneytracker.controllers.mains.HomeActivity"/>
+
+        <activity android:name="com.nhat.moneytracker.controllers.reports.ReportTransActivity"/>
+
+        <activity android:name="com.nhat.moneytracker.controllers.savings.HomeSavingsActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.savings.AddSavingsActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.savings.TabApplySavingsActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.savings.TabFinishSavingsActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.savings.DetailSavingsActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.savings.EditSavingsActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.savings.SeeTransSavingsActivity"/>
+
+        <activity android:name="com.nhat.moneytracker.controllers.transactions.DetailTransactionActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.transactions.EditTransactionActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.transactions.AddTransactionActivity"/>
+
+        <activity android:name="com.nhat.moneytracker.controllers.wallets.HomeWalletActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.wallets.AddWalletActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.wallets.EditWalletActivity"/>
+        <activity android:name="com.nhat.moneytracker.controllers.wallets.TransferWalletActivity"/>
+
+        <activity
+            android:name="com.nhat.moneytracker.controllers.mains.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.nhat.moneytracker.notifications.NotifierAlarm_Remind"/>
+        <receiver android:name="com.nhat.moneytracker.notifications.NotifierAlarm_Repeat"/>
+        <receiver android:name="com.nhat.moneytracker.notifications.NotifierAlarm_First"/>
+        <receiver android:name="com.nhat.moneytracker.notifications.NotifierAlarm_budget"/>
+
+    </application>
+
+</manifest>
